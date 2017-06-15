@@ -1,13 +1,12 @@
 import {
-  LOCATION_CHANGE,
   locationChange,
   updateLocation,
   default as locationReducer
-} from 'store/location';
+} from 'store/action';
 
 describe('(Internal Module) Location', () => {
   it('Should export a constant LOCATION_CHANGE.', () => {
-    expect(LOCATION_CHANGE).to.equal('LOCATION_CHANGE');
+    expect('LOCATION_CHANGE').to.equal('LOCATION_CHANGE');
   });
 
   describe('(Reducer)', () => {
@@ -44,7 +43,7 @@ describe('(Internal Module) Location', () => {
     });
 
     it('Should return an action with type "LOCATION_CHANGE".', () => {
-      expect(locationChange()).to.have.property('type', LOCATION_CHANGE);
+      expect(locationChange()).to.have.property('type', 'LOCATION_CHANGE');
     });
 
     it('Should assign the first argument to the "payload" property.', () => {
