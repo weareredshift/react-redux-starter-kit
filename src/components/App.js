@@ -50,7 +50,7 @@ class App extends React.Component {
     const breakpointName = activeQuery ? activeQuery.name : 'default'
     const breakpointSize = activeQuery && activeQuery.breakpoint
     // pushes active query string to store. If no breakpoint is active, pushes 'default'
-    dispatch(setActiveBreakpoint(breakpointName, breakpointSize, this.mediaQueryState))
+    dispatch(setActiveBreakpoint(breakpointName, breakpointSize))
   }
 
   shouldComponentUpdate () {

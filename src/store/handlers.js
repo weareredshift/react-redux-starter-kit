@@ -7,8 +7,7 @@ export const breakpoint = {
   SET_ACTIVE_BREAKPOINT: (state, action) => {
     const newobj = {
       name: action.breakpointName,
-      size: action.breakpointSize,
-      queryState: action.queryState
+      size: action.breakpointSize
     };
 
     return newobj;
