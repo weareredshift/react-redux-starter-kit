@@ -6,9 +6,12 @@ import { setActiveBreakpoint } from 'store/actions'
 import PropTypes from 'prop-types'
 
 class App extends React.Component {
-  static propTypes = {
-    store: PropTypes.object.isRequired,
-    routes: PropTypes.object.isRequired,
+  constructor (props) {
+    super(props);
+
+    // array that collects a mediaQueryList
+    // object for each breakpoint
+    this.mediaQueryState = [];
   }
 
   componentDidMount () {
