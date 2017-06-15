@@ -19,22 +19,20 @@ $spacer-array: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20;
 .px0 { padding-left: 0; padding-right: 0; }
 .py0 { padding-top: 0; padding-bottom: 0; }
 
-@each $space in $spacer-array {
-  $i: index($spacer-array, $space);
+@for $i from 1 through 20 {
+  .m#{$i}  { margin: #{$i}rem; }
+  .mt#{$i} { margin-top: #{$i}rem; }
+  .mr#{$i} { margin-right: #{$i}rem; }
+  .mb#{$i} { margin-bottom: #{$i}rem; }
+  .ml#{$i} { margin-left: #{$i}rem; }
+  .mx#{$i} { margin-left: #{$i}rem; margin-right: #{$i}rem; }
+  .my#{$i} { margin-top: #{$i}rem; margin-bottom: #{$i}rem; }
 
-  .m#{$i}  { margin: #{$space}rem; }
-  .mt#{$i} { margin-top: #{$space}rem; }
-  .mr#{$i} { margin-right: #{$space}rem; }
-  .mb#{$i} { margin-bottom: #{$space}rem; }
-  .ml#{$i} { margin-left: #{$space}rem; }
-  .mx#{$i} { margin-left: #{$space}rem; margin-right: #{$space}rem; }
-  .my#{$i} { margin-top: #{$space}rem; margin-bottom: #{$space}rem; }
-
-  .p#{$i}  { padding: #{$space}rem; }
-  .pt#{$i} { padding-top: #{$space}rem; }
-  .pr#{$i} { padding-right: #{$space}rem; }
-  .pb#{$i} { padding-bottom: #{$space}rem; }
-  .pl#{$i} { padding-left: #{$space}rem; }
-  .px#{$i} { padding-left: #{$space}rem; padding-right: #{$space}rem; }
-  .py#{$i} { padding-top: #{$space}rem; padding-bottom: #{$space}rem; }
+  .p#{$i}  { padding: #{$i}rem; }
+  .pt#{$i} { padding-top: #{$i}rem; }
+  .pr#{$i} { padding-right: #{$i}rem; }
+  .pb#{$i} { padding-bottom: #{$i}rem; }
+  .pl#{$i} { padding-left: #{$i}rem; }
+  .px#{$i} { padding-left: #{$i}rem; padding-right: #{$i}rem; }
+  .py#{$i} { padding-top: #{$i}rem; padding-bottom: #{$i}rem; }
 }
