@@ -7,7 +7,7 @@
     "clean": "rimraf dist",
     "compile": "node build/scripts/compile",
     "build": "npm run clean && env NODE_ENV=production npm run compile",
-    "start": "env NODE_ENV=development node build/scripts/start",
+    "start": "node build/scripts/start",
     "test": "webpack --env NODE_ENV=test --config ./build/webpack.config-test.js && nyc ava build/tests.js",
     "test:watch": "npm test -- --watch",
     "report": "nyc report --reporter=html",
@@ -25,6 +25,7 @@
     "bootstrap": "^4.0.0-alpha",
     "compression": "^1.6.2",
     "express": "^4.14.0",
+    "express-winston": "^2.4.0",
     "lost": "^8.0.0",
     "object-assign": "^4.1.1",
     "promise": "^7.1.1",
@@ -37,7 +38,9 @@
     "redux": "^3.6.0",
     "redux-request-manager": "^1.0.11",
     "redux-thunk": "^2.2.0",
-    "whatwg-fetch": "^2.0.3"
+    "whatwg-fetch": "^2.0.3",
+    "winston": "^2.3.1",
+    "winston-logrotate": "^1.0.1"
   },
   "devDependencies": {
     "ava": "^0.19.1",
